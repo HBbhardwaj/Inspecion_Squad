@@ -1,19 +1,24 @@
+import 'package:flutter/cupertino.dart';
+
 import '../contracts/ContractLogin.dart';
 
-class PresenterHome extends HomePres {
-  HomeView? homeView;
+class PresenterSelectPage extends SelectPagePresenter {
+  SelectPageView? selectPageView;
 
-  PresenterHome(_homePageState);
+  PresenterSelectPage(SelectPageView view) {
+    view.setPresenter(this);
+    selectPageView = view;
+  }
 
   @override
   onError(String msg) {
-    homeView?.showError(msg);
+    selectPageView?.showError(msg);
   }
 
   @override
   onSuccess(payload, String msg) {
-    homeView?.showSuccess(msg);
-    homeView!.goToNextPage();
+    selectPageView?.showSuccess(msg);
+    selectPageView!.goToHomePage();
   }
 
   @override
@@ -36,5 +41,6 @@ class PresenterHome extends HomePres {
       onSuccess('payload from server', 'success');
     } else
       mView!.showError('User credentials not valid, try again'); */
+    selectPageView!.goToHomePage();
   }
 }

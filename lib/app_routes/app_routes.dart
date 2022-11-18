@@ -3,22 +3,71 @@ import 'package:flutter/scheduler.dart';
 import 'package:get/get.dart';
 import 'package:restaurants/app_routes/routes.dart';
 import 'package:restaurants/view/HomePage.dart';
-import 'package:restaurants/view/LoginPage.dart';
+import 'package:restaurants/view/commonlistPage.dart';
+import 'package:restaurants/view/createInspectionPage.dart';
+import 'package:restaurants/view/dashboard_page.dart';
+import 'package:restaurants/view/selectpage.dart';
+import 'package:restaurants/view/loginPage.dart';
+
+import '../view/conductInspection.dart';
 
 appRoutes() => [
-      ///---- screen page ---///
+      ///---- loginpage page ---///
       GetPage(
-        name: Routes.loginScreen,
-        page: () => LoginPage(),
+        name: Routes.loginpage,
+        page: () => const LoginPage(),
         transition: Transition.leftToRightWithFade,
-        transitionDuration: Duration(milliseconds: 500),
+        transitionDuration: const Duration(milliseconds: 500),
       ),
 
-      ///---- home page ---///
+      ///---- Selectpage page ---///
       GetPage(
-        name: Routes.homeScreen,
-        page: () => HomePage(),
+        name: Routes.selectpage,
+        page: () => const SelectPage(),
         transition: Transition.leftToRightWithFade,
-        transitionDuration: Duration(milliseconds: 500),
+        transitionDuration: const Duration(milliseconds: 500),
+      ),
+
+      /// -------dashboardpage-----///
+
+      GetPage(
+        name: Routes.dashboardPage,
+        page: () => DashboardPage(),
+        transition: Transition.leftToRightWithFade,
+        transitionDuration: const Duration(milliseconds: 500),
+      ),
+
+      /// -------homepage-----///
+
+      GetPage(
+        name: Routes.homepage,
+        page: () => const HomePage(),
+        transition: Transition.leftToRightWithFade,
+        transitionDuration: const Duration(milliseconds: 500),
+      ),
+
+      ///---------------------createInspectionPage------------///
+      GetPage(
+        name: Routes.createInspectionPage,
+        page: () => const CreateInspectionPage(),
+        transition: Transition.leftToRightWithFade,
+        transitionDuration: const Duration(milliseconds: 500),
+      ),
+
+      ///----------------------------commonlistPage-----------------------///
+      GetPage(
+        name: Routes.commonlistPage,
+        page: () => const CommonListPage(),
+        transition: Transition.leftToRightWithFade,
+        transitionDuration: const Duration(milliseconds: 500),
+      ),
+
+      ///=========================conduct Inspection==============///
+
+      GetPage(
+        name: Routes.conductInspection,
+        page: () => const ConductInspection(),
+        transition: Transition.leftToRightWithFade,
+        transitionDuration: const Duration(milliseconds: 500),
       ),
     ];

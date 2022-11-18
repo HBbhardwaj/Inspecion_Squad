@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:restaurants/app_routes/routes.dart';
@@ -7,6 +9,8 @@ import 'package:restaurants/utils/app_string.dart';
 import '../contracts/ContractLogin.dart';
 
 class LoginPage extends StatefulWidget {
+  const LoginPage({Key? key}) : super(key: key);
+
   @override
   _LoginPageState createState() => _LoginPageState();
 }
@@ -29,67 +33,94 @@ class _LoginPageState extends State<LoginPage> implements View {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        elevation: 0.0,
         backgroundColor: Colors.white,
         centerTitle: true,
-        title: const Text(
-          AppStrings.loginappbartext,
-          style: TextStyle(
-            color: Colors.black,
-            fontSize: 16.0,
-            fontWeight: FontWeight.w700,
-          ),
-        ),
+        // title: const Text(
+        //   AppStrings.loginappbartext,
+        //   style: TextStyle(
+        //     color: Colors.black,
+        //     fontSize: 16.0,
+        //     fontWeight: FontWeight.w700,
+        //   ),
+        // ),
       ),
-      body: Container(
-        child: Form(
-          key: formKey,
+      body: Form(
+        key: formKey,
+        child: Container(
+          color: Colors.white,
           child: SingleChildScrollView(
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.stretch,
               children: <Widget>[
+                const SizedBox(
+                  height: 30,
+                ),
                 Image.asset(AppImages.loginlogo),
+                const SizedBox(
+                  height: 30,
+                ),
                 const Padding(padding: EdgeInsets.symmetric(vertical: 10.0)),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                  child: TextFormField(
+                    controller: cntrlEmail,
+                    keyboardType: TextInputType.emailAddress,
+                    decoration: InputDecoration(
+                        hintText: AppStrings.hintemailtext,
+                        border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(10.0))),
+                    style:
+                        const TextStyle(fontSize: 16.0, color: Colors.black87),
+                    validator: (value) {
+                      return null;
+                    },
+                    onSaved: (value) {
+                      presenter.setEmail(value!);
+                    },
+                  ),
+                ),
+                const Padding(padding: EdgeInsets.symmetric(vertical: 6.0)),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                  child: TextFormField(
+                    controller: cntrlPassword,
+                    keyboardType: TextInputType.text,
+                    obscureText: true,
+                    decoration: InputDecoration(
+                        border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(10)),
+                        hintText: AppStrings.hintpasswordtext,
+                        fillColor: Colors.blue),
+                    style:
+                        const TextStyle(fontSize: 16.0, color: Colors.black87),
+                    validator: (value) {},
+                    onSaved: (value) {
+                      presenter.setPassword(value!);
+                    },
+                  ),
+                ),
                 Text(
                   msg == null ? '' : '$msg',
-                  style: TextStyle(color: Colors.red),
-                ),
-                TextFormField(
-                  controller: cntrlEmail,
-                  keyboardType: TextInputType.emailAddress,
-                  decoration:
-                      const InputDecoration(hintText: AppStrings.hintemailtext),
-                  style: const TextStyle(fontSize: 16.0, color: Colors.black87),
-                  validator: (value) {},
-                  onSaved: (value) {
-                    presenter.setEmail(value!);
-                  },
-                ),
-                const Padding(padding: EdgeInsets.symmetric(vertical: 10.0)),
-                TextFormField(
-                  controller: cntrlPassword,
-                  keyboardType: TextInputType.text,
-                  obscureText: true,
-                  decoration: const InputDecoration(
-                      hintText: AppStrings.hintpasswordtext,
-                      fillColor: Colors.blue),
-                  style: const TextStyle(fontSize: 16.0, color: Colors.black87),
-                  validator: (value) {},
-                  onSaved: (value) {
-                    presenter.setPassword(value!);
-                  },
+                  style: const TextStyle(color: Colors.red),
                 ),
                 const Padding(
                     padding:
                         EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0)),
-                ElevatedButton(
-                  child: const Text(AppStrings.login),
-                  onPressed: () {
-                    if (formKey.currentState!.validate()) {
-                      formKey.currentState?.save();
-                      presenter.doLogin();
-                    }
-                  },
+                SizedBox(
+                  width: 250,
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      primary: Colors.blue,
+                      minimumSize: const Size.fromHeight(40), // NEW
+                    ),
+                    child: const Text(AppStrings.login),
+                    onPressed: () {
+                      if (formKey.currentState!.validate()) {
+                        formKey.currentState?.save();
+                        presenter.doLogin();
+                      }
+                    },
+                  ),
                 ),
                 const Padding(padding: EdgeInsets.symmetric(vertical: 10.0)),
               ],
@@ -102,7 +133,7 @@ class _LoginPageState extends State<LoginPage> implements View {
 
   @override
   gotoHomePage() {
-    Get.offAllNamed(Routes.homeScreen);
+    Get.offAllNamed(Routes.selectpage);
   }
 
   @override

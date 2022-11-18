@@ -1,24 +1,96 @@
 import 'package:restaurants/contracts/BasePresenter.dart';
 import 'package:restaurants/contracts/BaseView.dart';
 
+////==============================>Login page View && Login page presenter=======================///
+
 abstract class View extends BaseView {
-  showError(var msg); //called when the is an error to display
-  showSuccess(var msg); //message displayed when login is successful
+  showError(var msg);
+  showSuccess(var msg);
   gotoHomePage();
 }
 
-abstract class HomeView extends BaseView {
-  showError(var msg); //called when the is an error to display
-  showSuccess(var msg); //message displayed when login is successful
-  goToNextPage();
-}
-
 abstract class Presenter extends BasePresenter {
-  setEmail(String email); //to set user email for login
+  setEmail(String email);
   setPassword(String pwd);
   doLogin();
 }
 
-abstract class HomePres extends BasePresenter {
+///=============================Slected page View && Slected Page presenter====================///
+
+abstract class SelectPageView extends BaseView {
+  showError(var msg);
+  showSuccess(var msg);
+  goToHomePage();
+}
+
+abstract class SelectPagePresenter extends BasePresenter {
   nextPage();
+}
+
+///===================================== Home Page View && Home page presenter===================///
+abstract class HomePageView extends BaseView {
+  showError(var msg);
+  showSuccess(var msg);
+
+  goToInspectionPage();
+  gotoBackPage();
+}
+
+abstract class HomePagePresenter extends BasePresenter {
+  goToInspectionPage();
+  gotoBackPage();
+}
+
+///=============================DeshBorad view && DeshBorad presenter===================///
+
+abstract class DeshBoradView extends BaseView {
+  showError(var msg);
+  showSuccess(var msg);
+  gotoNextPage();
+  gotobackPage();
+}
+
+abstract class DeshBoradPresenter extends BasePresenter {
+  gotoNextPage();
+  gotoBackPage();
+}
+
+///========================CreateInspectionPage && CreateInspectionPage Presenter==========///
+
+abstract class CreateInsectionPageView extends BaseView {
+  showError(var msg);
+  showSuccess(var msg);
+  createnewInsection();
+  gotoBackpage();
+}
+
+abstract class CreateInsectionPagePresenter extends BasePresenter {
+  createnewInsection();
+  gotoBackpage();
+}
+
+///=========================CommonListPageView && CommonListPagePresenter====///
+
+abstract class CommonListPageView extends BaseView {
+  showError(var msg);
+  showSuccess(var msg);
+  gotoNextpage();
+}
+
+abstract class CommonListPagePresenter extends BasePresenter {
+  gotoNextPage();
+}
+
+///=========================ConductInspectionPageView && ConductInspectionPagePresenter====///
+
+abstract class ConductInspectionPageView extends BaseView {
+  showError(var msg);
+  showSuccess(var msg);
+  gotoNextpage();
+  gotoBackpage();
+}
+
+abstract class ConductInspectionPagePresenter extends BasePresenter {
+  gotoNextPage();
+  gotoBackPage();
 }

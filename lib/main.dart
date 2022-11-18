@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Restaurant',
       theme: ThemeData(primarySwatch: Colors.blue),
-      initialRoute: Routes.loginScreen,
+      initialRoute: Routes.loginpage,
       getPages: appRoutes(),
     );
   }
