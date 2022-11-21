@@ -1,3 +1,4 @@
+///======================import items==============///
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:restaurants/contracts/ContractLogin.dart';
@@ -14,12 +15,16 @@ class ConductInspection extends StatefulWidget {
   State<ConductInspection> createState() => _ConductInspectionState();
 }
 
+///=========================class started=================///
+
 class _ConductInspectionState extends State<ConductInspection>
     implements ConductInspectionPageView {
+  //================var ,list , bool , call here=============///
   List<CommonListModel> itemlist = [];
   var msg;
   late Presenter presenter;
   void initState() {
+    //=========================== item list is here ================///
     itemlist = [
       CommonListModel(
         AppIcons.settingIcon,
@@ -65,6 +70,8 @@ class _ConductInspectionState extends State<ConductInspection>
     super.initState();
   }
 
+  ///=====================Ui build method start here====================///
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -82,6 +89,8 @@ class _ConductInspectionState extends State<ConductInspection>
           color: Colors.black,
         ),
       ),
+
+      ///==================list start here==================///
       body: ListView.builder(
           itemBuilder: (context, int index) {
             return Column(

@@ -1,14 +1,11 @@
+///======================import items==============///
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:restaurants/app_routes/routes.dart';
 import 'package:restaurants/utils/app_images.dart';
 import 'package:restaurants/utils/app_string.dart';
 import 'package:restaurants/view/dashboard_page.dart';
 import '../contracts/ContractLogin.dart';
-import '../models/dashboard_model.dart';
 import '../presenter/presenter_selectpage.dart';
-import 'HomePage.dart';
-import 'loginPage.dart';
 
 class SelectPage extends StatefulWidget {
   const SelectPage({Key? key}) : super(key: key);
@@ -17,7 +14,9 @@ class SelectPage extends StatefulWidget {
   State<SelectPage> createState() => _SelectPageState();
 }
 
+///=========================class started=================///
 class _SelectPageState extends State<SelectPage> implements SelectPageView {
+  //================var ,list , bool , call here=============///
   late PresenterSelectPage presenter;
   var msg;
 
@@ -28,6 +27,7 @@ class _SelectPageState extends State<SelectPage> implements SelectPageView {
     PresenterSelectPage(this);
   }
 
+  ///=====================Ui build method start here====================///
   @override
   Widget build(BuildContext context) {
     return Scaffold(

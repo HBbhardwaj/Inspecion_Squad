@@ -1,5 +1,4 @@
-// ignore_for_file: file_names
-
+///======================import items==============///
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:restaurants/app_routes/routes.dart';
@@ -15,7 +14,9 @@ class LoginPage extends StatefulWidget {
   _LoginPageState createState() => _LoginPageState();
 }
 
+///=========================class started=================///
 class _LoginPageState extends State<LoginPage> implements View {
+  //================var ,list , bool , call here=============///
   TextEditingController cntrlEmail = TextEditingController();
   TextEditingController cntrlPassword = TextEditingController();
   final formKey = GlobalKey<FormState>();
@@ -29,6 +30,7 @@ class _LoginPageState extends State<LoginPage> implements View {
     PresenterLogin(this);
   }
 
+  ///=====================Ui build method start here====================///
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,14 +38,6 @@ class _LoginPageState extends State<LoginPage> implements View {
         elevation: 0.0,
         backgroundColor: Colors.white,
         centerTitle: true,
-        // title: const Text(
-        //   AppStrings.loginappbartext,
-        //   style: TextStyle(
-        //     color: Colors.black,
-        //     fontSize: 16.0,
-        //     fontWeight: FontWeight.w700,
-        //   ),
-        // ),
       ),
       body: Form(
         key: formKey,

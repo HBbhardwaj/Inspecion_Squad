@@ -8,6 +8,7 @@ import 'package:restaurants/view/selectpage.dart';
 import '../contracts/ContractLogin.dart';
 import '../presenter/presenter_deshboradpage.dart';
 import 'HomePage.dart';
+import 'conductInspection.dart';
 import 'loginPage.dart';
 
 class DashboardPage extends StatefulWidget {
@@ -37,7 +38,7 @@ class _DashboardPageState extends State<DashboardPage>
     ];
     screenList = [
       const HomePage(),
-      const LoginPage(),
+      const ConductInspection(),
       const HomePage(),
       const LoginPage(),
       const HomePage(),

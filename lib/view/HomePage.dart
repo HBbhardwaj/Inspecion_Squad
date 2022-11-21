@@ -1,3 +1,4 @@
+///======================import items==============///
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:restaurants/app_routes/routes.dart';
@@ -19,7 +20,9 @@ class HomePage extends StatefulWidget {
   State<HomePage> createState() => _HomePageState();
 }
 
+///=========================class started=================///
 class _HomePageState extends State<HomePage> implements HomePageView {
+  //================var ,list , bool , call here=============///
   late PresenterHomePage presenterHomePage;
   List<HomeModel> homeList = [];
 
@@ -27,6 +30,7 @@ class _HomePageState extends State<HomePage> implements HomePageView {
   void initState() {
     PresenterHomePage(this);
 
+    ///=======================homelist  craete here================///
     homeList = [
       HomeModel(
           leftIcon: AppIcons.leafIcon,
@@ -44,6 +48,7 @@ class _HomePageState extends State<HomePage> implements HomePageView {
     super.initState();
   }
 
+  ///=====================Ui build method start here====================///
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
@@ -109,13 +114,11 @@ class _HomePageState extends State<HomePage> implements HomePageView {
 
   @override
   goToInspectionPage() {
-    debugPrint("list selected index====> ${presenterHomePage.demiIndex}");
     switch (presenterHomePage.demiIndex) {
       case 0:
         Get.toNamed(Routes.loginpage);
         break;
       case 1:
-        debugPrint("fgjgkhfjhjfkh");
         Get.toNamed(Routes.createInspectionPage);
         break;
       case 2:

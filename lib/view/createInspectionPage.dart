@@ -1,3 +1,4 @@
+///======================import items==============///
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:restaurants/common_widget/textfeild.dart';
@@ -14,10 +15,14 @@ class CreateInspectionPage extends StatefulWidget {
   State<CreateInspectionPage> createState() => _CreateInspectionPageState();
 }
 
+///=========================class started=================///
 class _CreateInspectionPageState extends State<CreateInspectionPage>
     implements CreateInsectionPageView {
+  //================var ,list , bool , call here=============///
   var msg;
   late Presenter presenter;
+
+  ///=====================Ui build method start here====================///
   @override
   Widget build(BuildContext context) {
     return Scaffold(

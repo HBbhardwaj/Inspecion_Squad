@@ -1,3 +1,4 @@
+///======================import items==============///
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:restaurants/app_routes/routes.dart';
@@ -13,8 +14,10 @@ class ProtocalPage extends StatefulWidget {
   State<ProtocalPage> createState() => _ProtocalPageState();
 }
 
+///=========================class started=================///
 class _ProtocalPageState extends State<ProtocalPage>
     implements ProtocalPageView {
+  //================var ,list , bool , call here=============///
   List<ProtocalPageModel> itemlist = [];
   List<UnititemModel> UnitList = [];
   var msg;
@@ -23,6 +26,7 @@ class _ProtocalPageState extends State<ProtocalPage>
 
   @override
   void initState() {
+    //===========================unit item list is here ================///
     UnitList = [
       UnititemModel(AppStrings.kitchen, AppIcons.addIcon, AppIcons.commentIocn),
       UnititemModel(
@@ -39,6 +43,8 @@ class _ProtocalPageState extends State<ProtocalPage>
       UnititemModel(AppStrings.living, AppIcons.addIcon, AppIcons.commentIocn),
     ];
 
+    ///===============================items show in list from are here=====================///
+
     itemlist = [
       ProtocalPageModel(AppStrings.unit, AppIcons.dropdownIcon, UnitList),
       ProtocalPageModel(AppStrings.commonArea, AppIcons.dropdownIcon, []),
@@ -51,6 +57,7 @@ class _ProtocalPageState extends State<ProtocalPage>
     super.initState();
   }
 
+  ///=====================Ui build method start here====================///
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -68,6 +75,8 @@ class _ProtocalPageState extends State<ProtocalPage>
           color: Colors.black,
         ),
       ),
+
+      ///==================list start here==================///
       body: ListView.builder(
         itemBuilder: (context, int index) {
           return Column(
@@ -81,7 +90,6 @@ class _ProtocalPageState extends State<ProtocalPage>
                   child: Column(
                 children: [
                   ListTile(
-                    contentPadding: EdgeInsets.zero,
                     title: Text(itemlist[index].item1),
                     trailing: InkWell(
                       onTap: () {
@@ -91,6 +99,8 @@ class _ProtocalPageState extends State<ProtocalPage>
                           });
                         }
                       },
+
+                      ///====================Unit list is here================///
                       child: Image.asset(
                         itemlist[index].iconData,
                         width: 20,
