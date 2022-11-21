@@ -1,26 +1,32 @@
 import 'package:restaurants/contracts/ContractLogin.dart';
 
-class PresenterCommonList extends CommonListPagePresenter {
-  CommonListPageView? commonListPageView;
-  PresenterCommonList(CommonListPageView view) {
+class PresenterProtocal extends ProtocalPagePresenter {
+  ProtocalPageView? protocalPageView;
+  PresenterProtocal(ProtocalPageView view) {
     view.setPresenter(this);
-    commonListPageView = view;
+    protocalPageView = view;
+  }
+
+  @override
+  gotoBackPage() {
+    protocalPageView!.gotoBackPage();
   }
 
   @override
   gotoNextPage() {
-    // TODO: implement gotoNextPage
-    throw UnimplementedError();
+    protocalPageView!.gotoNextPgae();
   }
 
   @override
   onError(String msg) {
-    commonListPageView?.showError(msg);
+    // TODO: implement onError
+    throw UnimplementedError();
   }
 
   @override
   onSuccess(payload, String msg) {
-    commonListPageView?.showSuccess(msg);
+    // TODO: implement onSuccess
+    throw UnimplementedError();
   }
 
   @override

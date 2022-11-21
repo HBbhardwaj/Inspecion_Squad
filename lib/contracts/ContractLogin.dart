@@ -93,4 +93,19 @@ abstract class ConductInspectionPageView extends BaseView {
 abstract class ConductInspectionPagePresenter extends BasePresenter {
   gotoNextPage();
   gotoBackPage();
+  gotoprotocalPage();
+}
+
+///===========================ProtocalPageView && ProtocalPagePresenter=====///
+
+abstract class ProtocalPageView extends BaseView {
+  showError(var msg);
+  showSuccess(var msg);
+  gotoNextPgae();
+  gotoBackPage();
+}
+
+abstract class ProtocalPagePresenter extends BasePresenter {
+  gotoNextPage();
+  gotoBackPage();
 }

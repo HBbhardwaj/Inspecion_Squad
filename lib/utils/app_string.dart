@@ -33,6 +33,28 @@ class AppStrings {
   static const String zipplus = "Zip plus";
   static const String create = "Create ";
   static const String conductInspection = " Conduct Inspection";
-  static const String conductInpectionline1 =
-      "5001(Inspection ID)-12/8/2018 5:54pm";
+  static const String title = "5001(Inspection ID)-12/8/2018 5:54pm";
+  static const String title1 = "CA 100";
+  static const String titlt2 = "12356(Property)--12589(unit)";
+  static const String title3 = "2156 Holiday Washington CA-55555";
+  static const String title4 = "Not started";
+  static const String unsuccessful = "Unsuccessful";
+  static const String protocaltitle = "125489,2134 Holiday Perries CA";
+  static const String unit = "Unit";
+  static const String commonArea = "CommonArea";
+  static const String buildingex = "Building Exteriors";
+  static const String site = "Site";
+  static const String buildingsystem = "Building System";
+  static const String hAndS = "Hand and Safety";
+  static const String variance = "Variance";
+  static const String kitchen = "Kitchen";
+  static const String dinnerArea = "Dinning Area";
+  static const String porch = "Porch/Patio/Balcony";
+  static const String laundry = "Laundry Room";
+  static const String bathroom = "Bathroom";
+  static const String stroage = "Storage/Utility Room";
+  static const String basement = "Basement";
+  static const String garage = "Garage";
+  static const String bedroom = "Bedroom";
+  static const String living = "Living Area";
 }

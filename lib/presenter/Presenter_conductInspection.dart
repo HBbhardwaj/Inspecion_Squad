@@ -37,7 +37,12 @@ class PresenterConductInspection extends ConductInspectionPagePresenter {
 
   @override
   gotoBackPage() {
-    // TODO: implement gotoBackPage
+    conductInspectionPageView!.gotoBackpage();
+  }
+
+  @override
+  gotoprotocalPage() {
+    // TODO: implement gotoprotocalPage
     throw UnimplementedError();
   }
 }

@@ -11,4 +11,9 @@ class AppIcons {
   static const String nextIocn = basePath + "next.png";
   static const String editicon = basePath + "edit.png";
   static const String listIcon = basePath + "list.png";
+  static const String erroIcon = basePath + "Error.png";
+  static const String settingIcon = basePath + "setting.png";
+  static const String dropdownIcon = basePath + "dropdown.png";
+  static const String addIcon = basePath + "addIocn.png";
+  static const String commentIocn = basePath + "comment.png";
 }

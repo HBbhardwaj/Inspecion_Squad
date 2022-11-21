@@ -5,5 +5,5 @@ class Routes {
   static const String dashboardPage = '/DashboardPage';
   static const String createInspectionPage = "/CreateInspectionPage";
   static const String conductInspection = "/ConductInspection";
-  static const String commonlistPage = "/CommonlistPage";
+  static const String protocalPage = "/ProtocalPage";
 }
