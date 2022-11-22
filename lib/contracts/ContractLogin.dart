@@ -109,3 +109,19 @@ abstract class ProtocalPagePresenter extends BasePresenter {
   gotoNextPage();
   gotoBackPage();
 }
+
+///============================DecisionpageView && DecisionPagePresenter=====///
+
+abstract class DecisionPageView extends BaseView {
+  showError(var msg);
+  showSuccess(var msg);
+  gotoNextPgae();
+  gotoBackPage();
+  gotoclickNo();
+}
+
+abstract class DecisionPagePresenter extends BasePresenter {
+  gotoNextPage();
+  gotoBackPage();
+  gotoClickNo();
+}

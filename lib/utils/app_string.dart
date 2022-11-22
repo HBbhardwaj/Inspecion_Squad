@@ -57,4 +57,27 @@ class AppStrings {
   static const String garage = "Garage";
   static const String bedroom = "Bedroom";
   static const String living = "Living Area";
+  static const String doors = "Doors";
+  static const String light = "Lighting";
+  static const String market = "Market Appeal";
+  static const String outlet = "Outlet/Switches";
+  static const String wall = "Walls";
+  static const String ceiling = "Ceiling";
+  static const String window = "Window";
+  static const String counter = "Countertops";
+  static const String electricalS = "electrical System";
+  static const String floor = "Floor";
+  static const String hotwater = "Hot Water Heater";
+  static const String call = "call for Aid";
+  static const String sink = "Sink";
+  static const String cabinet = "Cabinets";
+  static const String bathroomitem = "Bathroom Items";
+  static const String nod = "NOD";
+  static const String od = "OD";
+  static const String nA = "N/A";
+  static const String doesbathroom = "Does Bathroom Exist ?";
+  static const String tab1 = "Yes";
+  static const String tab2 = "No";
+  static const String bathroomlocation = "Bathroom (Location)";
+  static const String nodata = "No Data";
 }

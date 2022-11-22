@@ -5,6 +5,7 @@ import 'package:restaurants/app_routes/routes.dart';
 import 'package:restaurants/view/HomePage.dart';
 import 'package:restaurants/view/createInspectionPage.dart';
 import 'package:restaurants/view/dashboard_page.dart';
+import 'package:restaurants/view/decisionPage.dart';
 import 'package:restaurants/view/selectpage.dart';
 import 'package:restaurants/view/loginPage.dart';
 
@@ -68,6 +69,15 @@ appRoutes() => [
       GetPage(
         name: Routes.protocalPage,
         page: () => const ProtocalPage(),
+        transition: Transition.leftToRightWithFade,
+        transitionDuration: const Duration(milliseconds: 500),
+      ),
+
+      ///========================>Decision Page ==================///
+
+      GetPage(
+        name: Routes.decisionPage,
+        page: () => const DecisionPage(),
         transition: Transition.leftToRightWithFade,
         transitionDuration: const Duration(milliseconds: 500),
       ),

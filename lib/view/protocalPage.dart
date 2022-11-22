@@ -120,28 +120,37 @@ class _ProtocalPageState extends State<ProtocalPage>
                               children: [
                                 Visibility(
                                   visible: isvisible,
-                                  child: Card(
-                                    color: Colors.deepPurple.shade50,
-                                    child: ListTile(
-                                      title: Text(UnitList[index].item1),
-                                      trailing: FittedBox(
-                                        fit: BoxFit.fill,
-                                        child: Row(
-                                          children: <Widget>[
-                                            Image.asset(
-                                              AppIcons.addIcon,
-                                              width: 18,
-                                              height: 18,
-                                            ),
-                                            const SizedBox(
-                                              width: 5,
-                                            ),
-                                            Image.asset(
-                                              AppIcons.commentIocn,
-                                              width: 18,
-                                              height: 18,
-                                            )
-                                          ],
+                                  child: InkWell(
+                                    onTap: () {
+                                      if (UnitList[index]
+                                          .item1
+                                          .contains(AppStrings.bathroom)) {
+                                        gotoNextPgae();
+                                      }
+                                    },
+                                    child: Card(
+                                      color: Colors.deepPurple.shade50,
+                                      child: ListTile(
+                                        title: Text(UnitList[index].item1),
+                                        trailing: FittedBox(
+                                          fit: BoxFit.fill,
+                                          child: Row(
+                                            children: <Widget>[
+                                              Image.asset(
+                                                AppIcons.addIcon,
+                                                width: 18,
+                                                height: 18,
+                                              ),
+                                              const SizedBox(
+                                                width: 5,
+                                              ),
+                                              Image.asset(
+                                                AppIcons.commentIocn,
+                                                width: 18,
+                                                height: 18,
+                                              )
+                                            ],
+                                          ),
                                         ),
                                       ),
                                     ),
@@ -170,8 +179,7 @@ class _ProtocalPageState extends State<ProtocalPage>
 
   @override
   gotoNextPgae() {
-    // TODO: implement gotoNextPgae
-    throw UnimplementedError();
+    Get.toNamed(Routes.decisionPage);
   }
 
   @override
