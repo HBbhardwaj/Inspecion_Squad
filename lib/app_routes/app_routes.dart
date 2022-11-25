@@ -3,6 +3,7 @@ import 'package:flutter/scheduler.dart';
 import 'package:get/get.dart';
 import 'package:restaurants/app_routes/routes.dart';
 import 'package:restaurants/view/HomePage.dart';
+import 'package:restaurants/view/addDecisionPage.dart';
 import 'package:restaurants/view/createInspectionPage.dart';
 import 'package:restaurants/view/dashboard_page.dart';
 import 'package:restaurants/view/decisionPage.dart';
@@ -78,6 +79,15 @@ appRoutes() => [
       GetPage(
         name: Routes.decisionPage,
         page: () => const DecisionPage(),
+        transition: Transition.leftToRightWithFade,
+        transitionDuration: const Duration(milliseconds: 500),
+      ),
+
+      ///========================>AddDecision Page ==================///
+
+      GetPage(
+        name: Routes.adddecision,
+        page: () => const AddDecisionPage(),
         transition: Transition.leftToRightWithFade,
         transitionDuration: const Duration(milliseconds: 500),
       ),

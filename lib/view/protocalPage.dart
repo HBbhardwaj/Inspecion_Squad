@@ -112,7 +112,7 @@ class _ProtocalPageState extends State<ProtocalPage>
                       ? ListView.builder(
                           itemCount: UnitList.length,
                           shrinkWrap: true,
-                          physics: const AlwaysScrollableScrollPhysics(),
+                          physics: const NeverScrollableScrollPhysics(),
                           itemBuilder: (BuildContext context, int index) {
                             return Column(
                               mainAxisAlignment: MainAxisAlignment.start,

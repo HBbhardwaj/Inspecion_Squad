@@ -22,11 +22,11 @@ class _DecisionPageState extends State<DecisionPage>
   var msg;
   late Presenter presenter;
   List<DecisionPageModel> decisonlist = [];
-  late TabController _tabcontroller;
   int initialIndex = 0;
 
   @override
   void initState() {
+    ///====================decisionlist item is here===========///
     decisonlist = [
       DecisionPageModel(AppStrings.doors, AppStrings.nod, AppStrings.od,
           AppStrings.nA, AppIcons.addIcon, AppIcons.commentIocn),
@@ -156,25 +156,50 @@ class _DecisionPageState extends State<DecisionPage>
                     ? Colors.deepPurple.shade50
                     : Colors.grey.shade200,
                 padding:
-                    const EdgeInsets.symmetric(horizontal: 5, vertical: 20),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  crossAxisAlignment: CrossAxisAlignment.center,
+                    const EdgeInsets.symmetric(horizontal: 5, vertical: 15),
+                child: Column(
                   children: [
-                    Text(decisonlist[index].item),
-                    Text(decisonlist[index].item2),
-                    Text(decisonlist[index].item3),
-                    Text(decisonlist[index].item4),
-                    Image.asset(
-                      decisonlist[index].iconData,
-                      height: 20,
-                      width: 20,
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Text(decisonlist[index].item),
+                        Text(decisonlist[index].item2),
+                        InkWell(
+                            onTap: () {
+                              if (decisonlist[index]
+                                  .item
+                                  .contains(AppStrings.electricalS)) {
+                                gotoNextPgae();
+                              }
+                            },
+                            child: Text(decisonlist[index].item3)),
+                        Text(decisonlist[index].item4),
+                        Image.asset(
+                          decisonlist[index].iconData,
+                          height: 20,
+                          width: 20,
+                        ),
+                        Image.asset(
+                          decisonlist[index].iconData1,
+                          height: 20,
+                          width: 20,
+                        ),
+                      ],
                     ),
-                    Image.asset(
-                      decisonlist[index].iconData1,
-                      height: 20,
-                      width: 20,
+                    const SizedBox(
+                      height: 10,
                     ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 50,
+                      ),
+                      child: Divider(
+                        color: (index % 2 == 0) ? Colors.grey : Colors.white,
+                        height: 3,
+                        thickness: 1,
+                      ),
+                    )
                   ],
                 ),
               ),
@@ -201,8 +226,7 @@ class _DecisionPageState extends State<DecisionPage>
 
   @override
   gotoNextPgae() {
-    // TODO: implement gotoNextPgae
-    throw UnimplementedError();
+    Get.toNamed(Routes.adddecision);
   }
 
   @override

@@ -7,4 +7,5 @@ class Routes {
   static const String conductInspection = "/ConductInspection";
   static const String protocalPage = "/ProtocalPage";
   static const String decisionPage = "/DecisionPage";
+  static const String adddecision = "/AddDecisionPage";
 }

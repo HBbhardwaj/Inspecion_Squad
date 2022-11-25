@@ -65,7 +65,7 @@ class AppStrings {
   static const String ceiling = "Ceiling";
   static const String window = "Window";
   static const String counter = "Countertops";
-  static const String electricalS = "electrical System";
+  static const String electricalS = "Electrical System";
   static const String floor = "Floor";
   static const String hotwater = "Hot Water Heater";
   static const String call = "call for Aid";
@@ -80,4 +80,14 @@ class AppStrings {
   static const String tab2 = "No";
   static const String bathroomlocation = "Bathroom (Location)";
   static const String nodata = "No Data";
+  static const String electicalSystemI = "Electrical system (Inspectable item)";
+  static const String breakers = "Breakers/Fuse(Missing)";
+  static const String burent = "Burent Breakers";
+  static const String covers = "Covers(Missing)";
+  static const String electricalPanel = "Electrical Panel(Blocked Access)";
+  static const String gif = "GIF (Inoperable)";
+  static const String leaks = "Leaks/Corrosion(Evidence of Leaks)";
+  static const String wiring = "Wiring";
+  static const String panelboard =
+      "Panel Board/ Main Power Switch (Blocked Access / Improper Stroage)";
 }

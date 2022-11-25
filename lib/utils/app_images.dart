@@ -16,4 +16,5 @@ class AppIcons {
   static const String dropdownIcon = basePath + "dropdown.png";
   static const String addIcon = basePath + "addIocn.png";
   static const String commentIocn = basePath + "comment.png";
+  static const String cancel = basePath + "cancel.png";
 }

@@ -125,3 +125,33 @@ abstract class DecisionPagePresenter extends BasePresenter {
   gotoBackPage();
   gotoClickNo();
 }
+
+///=========================AddDecisionpageView && AddDecisionPagePresenter ===================///
+
+abstract class AddDecisionPageView extends BaseView {
+  showError(var msg);
+  showSuccess(var msg);
+  gotoNextPage();
+  gotoBackPage();
+  gotoclickNo();
+}
+
+abstract class AddDecisionPagePresenter extends BasePresenter {
+  gotoNextPage();
+  gotoBackPage();
+  gotoClickNo();
+}
+
+///=====================ConfrimDecisionPageView && ConfrimDecisionPagePresenter===========///
+
+abstract class ConfrimDecisionPageView extends BaseView {
+  showError(var msg);
+  showSuccess(var msg);
+  gotoNextPage();
+  gotoBackPage();
+}
+
+abstract class ConfrimDecisionPagePresenter extends BasePresenter {
+  gotoNextPage();
+  gotoBackPage();
+}
