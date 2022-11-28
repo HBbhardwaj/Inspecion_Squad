@@ -90,4 +90,14 @@ class AppStrings {
   static const String wiring = "Wiring";
   static const String panelboard =
       "Panel Board/ Main Power Switch (Blocked Access / Improper Stroage)";
+  static const String covermissing = "Cover(Missing)(Deficiency)";
+  static const String noobserved = "NO Observed Deficiency";
+  static const String acoverismissing =
+      "A Cover is Missing and there are visible exposed Electrical Connections";
+  static const String entercommenthere = "Enter Comment Here:";
+  static const String photos = "Photos";
+  static const String phototaken = "Photo/s Taken";
+  static const String selectimage = "Select Image";
+  static const String ok = "OK";
+  static const String cancel = "Cancel";
 }

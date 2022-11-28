@@ -17,4 +17,5 @@ class AppIcons {
   static const String addIcon = basePath + "addIocn.png";
   static const String commentIocn = basePath + "comment.png";
   static const String cancel = basePath + "cancel.png";
+  static const String camera = basePath + "camera.png";
 }

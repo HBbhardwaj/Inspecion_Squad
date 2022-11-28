@@ -37,8 +37,11 @@ dependencies:
   #use for getx---->
   get: ^4.6.5
   get_storage: ^2.0.3
+
   # use for show flutter toast ----------->
   fluttertoast: ^8.1.1
+  #use for image pic from gallery ----------->
+  image_picker: ^0.8.6
 
 dev_dependencies:
   flutter_test:
