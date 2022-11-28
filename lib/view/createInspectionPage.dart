@@ -328,10 +328,15 @@ class _CreateInspectionPageState extends State<CreateInspectionPage>
               ),
               //======================Button================//
               ElevatedButton(
+                  style:
+                      ElevatedButton.styleFrom(primary: Colors.grey.shade200),
                   onPressed: () {
                     createnewInsection();
                   },
-                  child: const Text(AppStrings.create))
+                  child: const Text(
+                    AppStrings.create,
+                    style: TextStyle(color: Colors.black45),
+                  ))
             ],
           )),
     );

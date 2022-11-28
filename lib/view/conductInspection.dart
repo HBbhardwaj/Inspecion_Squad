@@ -112,7 +112,9 @@ class _ConductInspectionState extends State<ConductInspection>
                   height: 0,
                 ),
                 Card(
-                  color: Colors.blueGrey.shade50,
+                  color: (index % 2 == 0)
+                      ? Colors.grey.shade200
+                      : Colors.deepPurple.shade50,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(8.0),
                   ),
@@ -147,7 +149,7 @@ class _ConductInspectionState extends State<ConductInspection>
                               child: ElevatedButton(
                                 onPressed: () {},
                                 style: ElevatedButton.styleFrom(
-                                    primary: Colors.deepPurple.shade50),
+                                    primary: Colors.grey.shade200),
                                 child: const Text(
                                   AppStrings.unsuccessful,
                                   style: TextStyle(color: Colors.black54),

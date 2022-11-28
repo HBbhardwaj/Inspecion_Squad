@@ -59,13 +59,13 @@ class _ConfrimDecisionState extends State<ConfrimDecisionPage>
           onPressed: () => gotoBackPage(),
         ),
       ),
-      body: SingleChildScrollView(
-        child: SizedBox(
-          height: MediaQuery.of(context).size.height,
-          child: Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Card(
-              elevation: 1,
+      body: SizedBox(
+        height: MediaQuery.of(context).size.height,
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Card(
+            elevation: 1,
+            child: SingleChildScrollView(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -109,7 +109,7 @@ class _ConfrimDecisionState extends State<ConfrimDecisionPage>
                       );
                     },
                     itemCount: confrimDecisionlist.length,
-                    physics: const NeverScrollableScrollPhysics(),
+                    physics: const AlwaysScrollableScrollPhysics(),
                     shrinkWrap: true,
                   ),
                   const Divider(
@@ -158,8 +158,8 @@ class _ConfrimDecisionState extends State<ConfrimDecisionPage>
                         },
                         icon: Image.asset(
                           AppIcons.camera,
-                          height: 15,
-                          width: 15,
+                          height: 20,
+                          width: 20,
                         ),
                         label: const Text(
                           AppStrings.selectimage,
@@ -169,9 +169,12 @@ class _ConfrimDecisionState extends State<ConfrimDecisionPage>
                   image == null
                       ? Container()
                       : SizedBox(
-                          height: 100,
-                          width: 100,
-                          child: Image.file(File(image!.path))),
+                          height: 150,
+                          width: 140,
+                          child: Card(
+                              elevation: 4,
+                              color: Colors.grey.shade200,
+                              child: Image.file(File(image!.path)))),
                   const Divider(
                     height: 10,
                     thickness: 10,

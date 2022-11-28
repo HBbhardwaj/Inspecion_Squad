@@ -72,8 +72,8 @@ class _DashboardPageState extends State<DashboardPage>
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.shifting,
         backgroundColor: Colors.grey,
-        selectedItemColor: Colors.blue,
-        unselectedItemColor: Colors.black.withOpacity(.90),
+        selectedItemColor: Colors.deepPurple.shade200,
+        unselectedItemColor: Colors.black45,
         selectedFontSize: 14,
         unselectedFontSize: 14,
         currentIndex: presenterDeshBoradPage.demiSelectedIndex,
