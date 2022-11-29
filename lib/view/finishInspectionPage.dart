@@ -88,7 +88,7 @@ class _FinishInspectionPageState extends State<FinishInspectionPage>
                                 child: InkWell(
                                   onTap: () {
                                     if (index == 2) {
-                                      gotoBackPage();
+                                      gotoNextPage();
                                     }
                                   },
                                   child: Text(
@@ -162,8 +162,7 @@ class _FinishInspectionPageState extends State<FinishInspectionPage>
 
   @override
   gotoNextPage() {
-    // TODO: implement gotoNextPage
-    throw UnimplementedError();
+    Get.toNamed(Routes.observedDeficiencies);
   }
 
   @override

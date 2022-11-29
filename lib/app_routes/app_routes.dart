@@ -11,6 +11,7 @@ import 'package:restaurants/view/loginPage.dart';
 import '../view/conductInspection.dart';
 import '../view/confirmDecisionPage.dart';
 import '../view/finishInspectionPage.dart';
+import '../view/observedDeficienciesPage.dart';
 import '../view/protocalPage.dart';
 
 appRoutes() => [
@@ -104,6 +105,14 @@ appRoutes() => [
       GetPage(
         name: Routes.finishInspection,
         page: () => const FinishInspectionPage(),
+        transition: Transition.leftToRightWithFade,
+        transitionDuration: const Duration(milliseconds: 500),
+      ),
+
+      ///=======================ObservedDeficienciesPage================///
+      GetPage(
+        name: Routes.observedDeficiencies,
+        page: () => const ObservedDeficiencies(),
         transition: Transition.leftToRightWithFade,
         transitionDuration: const Duration(milliseconds: 500),
       ),

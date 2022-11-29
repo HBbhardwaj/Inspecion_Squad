@@ -106,4 +106,5 @@ class AppStrings {
   static const String submit = "Submit";
   static const String offline = "Offline";
   static const String save = "Save";
+  static const String observeddrficiencies = "Observed Deficiencies";
 }

@@ -218,13 +218,19 @@ class _ConfrimDecisionState extends State<ConfrimDecisionPage>
     );
   }
 
+  void clearController() {
+    confrimdecisionpagecontroller.clear();
+  }
+
   @override
   gotoBackPage() {
+    clearController();
     Get.offAllNamed(Routes.adddecision);
   }
 
   @override
   gotoNextPage() {
+    clearController();
     Get.toNamed(Routes.finishInspection);
   }
 

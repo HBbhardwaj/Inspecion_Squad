@@ -169,3 +169,17 @@ abstract class FinishInspectionPagePresenter extends BasePresenter {
   gotoNextPage();
   gotobackPage();
 }
+
+///========================observed Deficiencies==============///
+
+abstract class ObservedDeficienciesView extends BaseView {
+  showError(var msg);
+  showSuccess(var msg);
+  gotoNextPage();
+  gotoBackPage();
+}
+
+abstract class ObservedDeficienciesPresenter extends BasePresenter {
+  gotoNextPage();
+  gotobackPage();
+}
