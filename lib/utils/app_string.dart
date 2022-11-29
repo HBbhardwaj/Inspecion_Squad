@@ -100,4 +100,10 @@ class AppStrings {
   static const String selectimage = "Select Image";
   static const String ok = "OK";
   static const String cancel = "Cancel";
+  static const String finishInspection = "Finish Inspection";
+  static const String complate = "Complate";
+  static const String online = "Online";
+  static const String submit = "Submit";
+  static const String offline = "Offline";
+  static const String save = "Save";
 }

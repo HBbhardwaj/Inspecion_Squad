@@ -1,5 +1,3 @@
-import 'package:flutter/scheduler.dart';
-
 import 'package:get/get.dart';
 import 'package:restaurants/app_routes/routes.dart';
 import 'package:restaurants/view/HomePage.dart';
@@ -12,6 +10,7 @@ import 'package:restaurants/view/loginPage.dart';
 
 import '../view/conductInspection.dart';
 import '../view/confirmDecisionPage.dart';
+import '../view/finishInspectionPage.dart';
 import '../view/protocalPage.dart';
 
 appRoutes() => [
@@ -97,6 +96,14 @@ appRoutes() => [
       GetPage(
         name: Routes.confrimdecision,
         page: () => const ConfrimDecisionPage(),
+        transition: Transition.leftToRightWithFade,
+        transitionDuration: const Duration(milliseconds: 500),
+      ),
+
+      ///=======================FinishInspectionPage================///
+      GetPage(
+        name: Routes.finishInspection,
+        page: () => const FinishInspectionPage(),
         transition: Transition.leftToRightWithFade,
         transitionDuration: const Duration(milliseconds: 500),
       ),

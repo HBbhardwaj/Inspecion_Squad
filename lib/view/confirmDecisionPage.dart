@@ -199,7 +199,9 @@ class _ConfrimDecisionState extends State<ConfrimDecisionPage>
                         ElevatedButton(
                             style: ElevatedButton.styleFrom(
                                 primary: Colors.grey.shade200),
-                            onPressed: () {},
+                            onPressed: () {
+                              gotoNextPage();
+                            },
                             child: const Text(
                               AppStrings.ok,
                               style: TextStyle(color: Colors.black45),
@@ -223,8 +225,7 @@ class _ConfrimDecisionState extends State<ConfrimDecisionPage>
 
   @override
   gotoNextPage() {
-    // TODO: implement gotoNextPage
-    throw UnimplementedError();
+    Get.toNamed(Routes.finishInspection);
   }
 
   @override
@@ -234,8 +235,9 @@ class _ConfrimDecisionState extends State<ConfrimDecisionPage>
   }
 
   @override
-  setPresenter(t) {
-    this.presenter = t;
+  setPresenter(msg) {
+    // TODO: implement showError
+    throw UnimplementedError();
   }
 
   @override

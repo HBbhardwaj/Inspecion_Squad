@@ -155,3 +155,17 @@ abstract class ConfrimDecisionPagePresenter extends BasePresenter {
   gotoNextPage();
   gotoBackPage();
 }
+
+///=======================FinishInspectionPageView && FinishInspectionPagePresenter=============///
+
+abstract class FinishInspectionPageView extends BaseView {
+  showError(var msg);
+  showSuccess(var msg);
+  gotoNextPage();
+  gotoBackPage();
+}
+
+abstract class FinishInspectionPagePresenter extends BasePresenter {
+  gotoNextPage();
+  gotobackPage();
+}
