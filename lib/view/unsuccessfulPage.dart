@@ -17,12 +17,12 @@ class UnsuccessfulPage extends StatefulWidget {
 ///=========================class started=================///
 class _UnsuccessfulPageState extends State<UnsuccessfulPage>
     implements UnsuccessfulViewPage {
-  @override
   //================var ,list , bool , call here=============///
   var msg;
 
   ///=====================Ui build method start here====================///
 
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
