@@ -8,17 +8,17 @@ import '../app_routes/routes.dart';
 import '../models/commonlist_model.dart';
 import '../utils/app_images.dart';
 
-class ConductInspection extends StatefulWidget {
-  const ConductInspection({Key? key}) : super(key: key);
+class InspectionStatuspage extends StatefulWidget {
+  const InspectionStatuspage({Key? key}) : super(key: key);
 
   @override
-  State<ConductInspection> createState() => _ConductInspectionState();
+  State<InspectionStatuspage> createState() => _InspectionStatuspageState();
 }
 
 ///=========================class started=================///
 
-class _ConductInspectionState extends State<ConductInspection>
-    implements ConductInspectionPageView {
+class _InspectionStatuspageState extends State<InspectionStatuspage>
+    implements InspectionStatusView {
   //================var ,list , bool , call here=============///
   List<CommonListModel> itemlist = [];
   var msg;
@@ -27,7 +27,7 @@ class _ConductInspectionState extends State<ConductInspection>
     //=========================== item list is here ================///
     itemlist = [
       CommonListModel(
-        AppIcons.settingIcon,
+        AppIcons.cloudcheck,
         AppStrings.title,
         AppStrings.title1,
         AppStrings.titlt2,
@@ -35,7 +35,7 @@ class _ConductInspectionState extends State<ConductInspection>
         AppStrings.title4,
       ),
       CommonListModel(
-        AppIcons.warningIcon,
+        AppIcons.cloudsetting,
         AppStrings.title,
         AppStrings.title1,
         AppStrings.titlt2,
@@ -43,7 +43,7 @@ class _ConductInspectionState extends State<ConductInspection>
         AppStrings.title4,
       ),
       CommonListModel(
-        AppIcons.settingIcon,
+        AppIcons.cloudcheck,
         AppStrings.title,
         AppStrings.title1,
         AppStrings.titlt2,
@@ -51,7 +51,7 @@ class _ConductInspectionState extends State<ConductInspection>
         AppStrings.title4,
       ),
       CommonListModel(
-        AppIcons.warningIcon,
+        AppIcons.cloudsetting,
         AppStrings.title,
         AppStrings.title1,
         AppStrings.titlt2,
@@ -59,7 +59,7 @@ class _ConductInspectionState extends State<ConductInspection>
         AppStrings.title4,
       ),
       CommonListModel(
-        AppIcons.settingIcon,
+        AppIcons.cloudcheck,
         AppStrings.title,
         AppStrings.title1,
         AppStrings.titlt2,
@@ -79,13 +79,13 @@ class _ConductInspectionState extends State<ConductInspection>
         elevation: 1,
         centerTitle: true,
         title: const Text(
-          AppStrings.conductInspection,
+          AppStrings.inspectionstatus,
           style: TextStyle(color: Colors.black),
         ),
         backgroundColor: Colors.white,
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
-          onPressed: () => gotoBackpage(),
+          onPressed: () => gotoBackPage(),
           color: Colors.black,
         ),
       ),
@@ -120,14 +120,16 @@ class _ConductInspectionState extends State<ConductInspection>
                   ),
                   child: Container(
                     width: Get.width,
-                    padding: EdgeInsets.all(10.0),
+                    padding: const EdgeInsets.all(10.0),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       mainAxisSize: MainAxisSize.min,
                       children: [
                         InkWell(
-                          onTap: () => gotoprotocalPage(),
+                          onTap: () {
+                            gotoNextPage();
+                          },
                           child: Image.asset(
                             itemlist[index].iconData,
                             width: 70,
@@ -135,7 +137,7 @@ class _ConductInspectionState extends State<ConductInspection>
                             fit: BoxFit.fill,
                           ),
                         ),
-                        SizedBox(width: 14),
+                        const SizedBox(width: 14),
                         Column(
                           mainAxisAlignment: MainAxisAlignment.start,
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -157,19 +159,16 @@ class _ConductInspectionState extends State<ConductInspection>
                               height: 1,
                             ),
                             Container(
-                                width: 230,
-                                color: Colors.yellow.shade100,
-                                child: Text(itemlist[index].title4)),
-                            SizedBox(
-                              width: 120,
-                              child: ElevatedButton(
-                                onPressed: () {},
-                                style: ElevatedButton.styleFrom(
-                                    primary: Colors.grey.shade200),
-                                child: const Text(
-                                  AppStrings.unsuccessful,
-                                  style: TextStyle(color: Colors.black54),
-                                ),
+                              width: 230,
+                              color: Colors.yellow.shade100,
+                              child: Row(
+                                children: const [
+                                  Text(AppStrings.unsuccessful),
+                                  Padding(
+                                    padding: EdgeInsets.only(left: 20),
+                                    child: Text(AppStrings.fail),
+                                  ),
+                                ],
                               ),
                             )
                           ],
@@ -188,16 +187,6 @@ class _ConductInspectionState extends State<ConductInspection>
   }
 
   @override
-  gotoprotocalPage() {
-    Get.toNamed(Routes.protocalPage);
-  }
-
-  @override
-  gotoNextpage() {
-    // TODO: implement gotoNextpage
-    throw UnimplementedError();
-  }
-
   @override
   refresh() {
     // TODO: implement refresh
@@ -223,7 +212,12 @@ class _ConductInspectionState extends State<ConductInspection>
   }
 
   @override
-  gotoBackpage() {
-    Get.offAllNamed(Routes.createInspectionPage);
+  gotoBackPage() {
+    Get.offAllNamed(Routes.observedDeficiencies);
+  }
+
+  @override
+  gotoNextPage() {
+    Get.toNamed(Routes.unsuccessfulPage);
   }
 }

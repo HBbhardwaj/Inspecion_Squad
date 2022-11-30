@@ -27,35 +27,180 @@ class _ObservedDeficienciesState extends State<ObservedDeficiencies>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        elevation: 1,
-        centerTitle: true,
-        title: const Text(
-          AppStrings.observeddrficiencies,
-          style: TextStyle(color: Colors.black),
-        ),
-        backgroundColor: Colors.white,
-        leading: IconButton(
-          icon: const Icon(
-            Icons.arrow_back,
-            color: Colors.black,
+        appBar: AppBar(
+          elevation: 1,
+          centerTitle: true,
+          title: const Text(
+            AppStrings.observeddrficiencies,
+            style: TextStyle(color: Colors.black),
           ),
-          onPressed: () => gotoBackPage(),
+          backgroundColor: Colors.white,
+          leading: IconButton(
+            icon: const Icon(
+              Icons.arrow_back,
+              color: Colors.black,
+            ),
+            onPressed: () => gotoBackPage(),
+          ),
         ),
-      ),
-      body: Text("Hello"),
-    );
+        body: SingleChildScrollView(
+          child: SizedBox(
+            width: Get.width,
+            child: Padding(
+              padding: const EdgeInsets.all(4.0),
+              child: Card(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(8.0), //<-- SEE HERE
+                ),
+                elevation: 1,
+                child: Column(
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        SizedBox(
+                          width: Get.width * 0.62,
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisSize: MainAxisSize.min,
+                            children: const [
+                              SizedBox(
+                                height: 10,
+                              ),
+                              Padding(
+                                padding: EdgeInsets.all(8.0),
+                                child: Text(AppStrings.unitbathroom),
+                              ),
+                              SizedBox(
+                                height: 4,
+                              ),
+                              Padding(
+                                padding: EdgeInsets.all(8.0),
+                                child: Text(AppStrings.electricalS),
+                              ),
+                              SizedBox(
+                                height: 4,
+                              ),
+                              Padding(
+                                padding: EdgeInsets.all(8.0),
+                                child:
+                                    Flexible(child: Text(AppStrings.acoveris)),
+                              )
+                            ],
+                          ),
+                        ),
+                        SizedBox(
+                          width: Get.width * 0.30,
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              const Padding(
+                                padding: EdgeInsets.all(8.0),
+                                child: Text(AppStrings.edit),
+                              ),
+                              SizedBox(
+                                width: 100,
+                                child: ElevatedButton(
+                                    style: ElevatedButton.styleFrom(
+                                        shape: RoundedRectangleBorder(
+                                          borderRadius:
+                                              BorderRadius.circular(12),
+                                        ),
+                                        primary: Colors.deepPurple.shade100),
+                                    onPressed: () {},
+                                    child: const Text(
+                                      AppStrings.resolve,
+                                      style: TextStyle(color: Colors.black54),
+                                    )),
+                              ),
+                              SizedBox(
+                                width: 100,
+                                child: ElevatedButton(
+                                    style: ElevatedButton.styleFrom(
+                                        shape: RoundedRectangleBorder(
+                                          borderRadius:
+                                              BorderRadius.circular(12),
+                                        ),
+                                        primary: Colors.deepPurple.shade100),
+                                    onPressed: () {},
+                                    child: const Text(
+                                      AppStrings.photos,
+                                      style: TextStyle(color: Colors.black54),
+                                    )),
+                              ),
+                              SizedBox(
+                                width: 100,
+                                child: ElevatedButton(
+                                    style: ElevatedButton.styleFrom(
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(12),
+                                      ),
+                                      primary: Colors.deepPurple.shade100,
+                                    ),
+                                    onPressed: () {},
+                                    child: const Text(
+                                      AppStrings.comment,
+                                      style: TextStyle(color: Colors.black54),
+                                    )),
+                              ),
+                              SizedBox(
+                                width: 100,
+                                child: ElevatedButton(
+                                    style: ElevatedButton.styleFrom(
+                                        shape: RoundedRectangleBorder(
+                                          borderRadius:
+                                              BorderRadius.circular(12),
+                                        ),
+                                        primary: Colors.deepPurple.shade100),
+                                    onPressed: () {
+                                      gotoNextPage();
+                                    },
+                                    child: const Text(
+                                      AppStrings.delete,
+                                      style: TextStyle(color: Colors.black54),
+                                    )),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                    const Padding(
+                      padding: EdgeInsets.all(15),
+                      child: Divider(
+                        height: 1,
+                        thickness: 1,
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.all(2),
+                      child: Divider(
+                        height: 10,
+                        thickness: 15,
+                        color: Colors.deepPurple.shade50,
+                      ),
+                    )
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ));
   }
 
   @override
   gotoBackPage() {
-    Get.offAllNamed(Routes.confrimdecision);
+    Get.offAllNamed(Routes.finishInspection);
   }
 
   @override
   gotoNextPage() {
-    // TODO: implement gotoNextPage
-    throw UnimplementedError();
+    Get.toNamed(Routes.inspectionstatus);
   }
 
   @override

@@ -11,4 +11,6 @@ class Routes {
   static const String confrimdecision = "/ConfrimDecisionPage";
   static const String finishInspection = "/FinishInspectionPage";
   static const String observedDeficiencies = "/ObservedDeficiencies";
+  static const String inspectionstatus = "/InspectionStatuspage";
+  static const String unsuccessfulPage = "/UnsuccessfulPage";
 }

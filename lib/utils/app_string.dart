@@ -107,4 +107,14 @@ class AppStrings {
   static const String offline = "Offline";
   static const String save = "Save";
   static const String observeddrficiencies = "Observed Deficiencies";
+  static const String unitbathroom = "Unit Bathroom";
+  static const String acoveris =
+      "A cover is missing,and there are visible exposed electrical connections The electrical panel is located on the North wall, to the right of the sink.";
+  static const String edit = "Edit";
+  static const String resolve = "Resolve";
+  static const String comment = "Comment";
+  static const String delete = "Delete";
+  static const String inspectionstatus = "Inspection Status";
+  static const String fail = "Fail";
+  static const String enterReason = "Enter Reason Unsuccessful:";
 }

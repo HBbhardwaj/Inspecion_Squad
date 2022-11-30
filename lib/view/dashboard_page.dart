@@ -8,8 +8,12 @@ import 'package:restaurants/view/selectpage.dart';
 import '../contracts/ContractLogin.dart';
 import '../presenter/presenter_deshboradpage.dart';
 import 'HomePage.dart';
+import 'addDecisionPage.dart';
 import 'conductInspection.dart';
+import 'inspectionStatusPage.dart';
 import 'loginPage.dart';
+import 'observedDeficienciesPage.dart';
+import 'unsuccessfulPage.dart';
 
 class DashboardPage extends StatefulWidget {
   DashboardPage({
@@ -39,10 +43,10 @@ class _DashboardPageState extends State<DashboardPage>
     screenList = [
       const HomePage(),
       const ConductInspection(),
-      const HomePage(),
-      const LoginPage(),
-      const HomePage(),
-      const SelectPage()
+      const InspectionStatuspage(),
+      const ObservedDeficiencies(),
+      const AddDecisionPage(),
+      const UnsuccessfulPage()
     ];
 
     PresenterDeshBoradPage(this);

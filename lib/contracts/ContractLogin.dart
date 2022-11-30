@@ -183,3 +183,29 @@ abstract class ObservedDeficienciesPresenter extends BasePresenter {
   gotoNextPage();
   gotobackPage();
 }
+
+///=====================Inspection status=====================///
+abstract class InspectionStatusView extends BaseView {
+  showError(var msg);
+  showSuccess(var msg);
+  gotoNextPage();
+  gotoBackPage();
+}
+
+abstract class InspectionStatusPresenter extends BasePresenter {
+  gotoNextPage();
+  gotobackPage();
+}
+
+///======================Unsuccessful ==================///
+abstract class UnsuccessfulViewPage extends BaseView {
+  showError(var msg);
+  showSuccess(var msg);
+  gotoNextPage();
+  gotoBackPage();
+}
+
+abstract class UnsuccessfulPresenter extends BasePresenter {
+  gotoNextPage();
+  gotoBackPage();
+}

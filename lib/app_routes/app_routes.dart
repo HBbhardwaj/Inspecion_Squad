@@ -7,10 +7,12 @@ import 'package:restaurants/view/dashboard_page.dart';
 import 'package:restaurants/view/decisionPage.dart';
 import 'package:restaurants/view/selectpage.dart';
 import 'package:restaurants/view/loginPage.dart';
+import 'package:restaurants/view/unsuccessfulPage.dart';
 
 import '../view/conductInspection.dart';
 import '../view/confirmDecisionPage.dart';
 import '../view/finishInspectionPage.dart';
+import '../view/inspectionStatusPage.dart';
 import '../view/observedDeficienciesPage.dart';
 import '../view/protocalPage.dart';
 
@@ -113,6 +115,22 @@ appRoutes() => [
       GetPage(
         name: Routes.observedDeficiencies,
         page: () => const ObservedDeficiencies(),
+        transition: Transition.leftToRightWithFade,
+        transitionDuration: const Duration(milliseconds: 500),
+      ),
+
+      ///============================InspectionStatuspage ====================///
+      GetPage(
+        name: Routes.inspectionstatus,
+        page: () => const InspectionStatuspage(),
+        transition: Transition.leftToRightWithFade,
+        transitionDuration: const Duration(milliseconds: 500),
+      ),
+
+      ///==========================UnsuccessfulPage=====================///
+      GetPage(
+        name: Routes.unsuccessfulPage,
+        page: () => const UnsuccessfulPage(),
         transition: Transition.leftToRightWithFade,
         transitionDuration: const Duration(milliseconds: 500),
       ),
