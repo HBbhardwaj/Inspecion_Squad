@@ -36,6 +36,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   #use for getx---->
   get: ^4.6.5
+  dio: ^4.0.6
   get_storage: ^2.0.3
 
   # use for show flutter toast ----------->
@@ -53,6 +54,8 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^1.0.0
+  build_runner: ^2.3.3
+  json_serializable: ^6.5.4
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

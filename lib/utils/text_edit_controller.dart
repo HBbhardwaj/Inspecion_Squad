@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 
 TextEditingController phaNameController = TextEditingController();
+TextEditingController emailController = TextEditingController();
+TextEditingController passwordController = TextEditingController();
 TextEditingController phaCodeController = TextEditingController();
 TextEditingController properityIdController = TextEditingController();
 TextEditingController inspectoridController = TextEditingController();

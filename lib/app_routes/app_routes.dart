@@ -20,7 +20,7 @@ appRoutes() => [
       ///---- loginpage page ---///
       GetPage(
         name: Routes.loginpage,
-        page: () => const LoginPage(),
+        page: () => LoginPage(),
         transition: Transition.leftToRightWithFade,
         transitionDuration: const Duration(milliseconds: 500),
       ),

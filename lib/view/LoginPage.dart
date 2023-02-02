@@ -5,10 +5,13 @@ import 'package:restaurants/app_routes/routes.dart';
 import 'package:restaurants/presenter/Presenter.dart';
 import 'package:restaurants/utils/app_images.dart';
 import 'package:restaurants/utils/app_string.dart';
+import 'package:restaurants/utils/text_edit_controller.dart';
+import 'package:restaurants/view/view_controller/home/home_controller.dart';
 import '../contracts/ContractLogin.dart';
 
 class LoginPage extends StatefulWidget {
-  const LoginPage({Key? key}) : super(key: key);
+  final _homeController = Get.put(HomeController());
+  LoginPage({Key? key}) : super(key: key);
 
   @override
   _LoginPageState createState() => _LoginPageState();
@@ -17,8 +20,7 @@ class LoginPage extends StatefulWidget {
 ///=========================class started=================///
 class _LoginPageState extends State<LoginPage> implements View {
   //================var ,list , bool , call here=============///
-  TextEditingController cntrlEmail = TextEditingController();
-  TextEditingController cntrlPassword = TextEditingController();
+
   final formKey = GlobalKey<FormState>();
   var msg;
   late Presenter presenter;
@@ -57,7 +59,7 @@ class _LoginPageState extends State<LoginPage> implements View {
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 20),
                   child: TextFormField(
-                    controller: cntrlEmail,
+                    controller: emailController,
                     keyboardType: TextInputType.emailAddress,
                     decoration: InputDecoration(
                         hintText: AppStrings.hintemailtext,
@@ -77,7 +79,7 @@ class _LoginPageState extends State<LoginPage> implements View {
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 20),
                   child: TextFormField(
-                    controller: cntrlPassword,
+                    controller: passwordController,
                     keyboardType: TextInputType.text,
                     obscureText: true,
                     decoration: InputDecoration(
@@ -111,7 +113,8 @@ class _LoginPageState extends State<LoginPage> implements View {
                     onPressed: () {
                       if (formKey.currentState!.validate()) {
                         formKey.currentState?.save();
-                        presenter.doLogin();
+                        //presenter.doLogin();
+                        widget._homeController.callLoginApi(presenter);
                       }
                     },
                   ),

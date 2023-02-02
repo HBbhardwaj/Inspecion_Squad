@@ -1,5 +1,7 @@
 class AppStrings {
   static const String login = "Login";
+  static const String yes = "Yes";
+  static const String no = "No";
   static const String hintemailtext = "Email";
   static const String hintpasswordtext = "password";
   static const String loginappbartext = "Inspection squad";
@@ -47,6 +49,7 @@ class AppStrings {
   static const String buildingsystem = "Building System";
   static const String hAndS = "Hand and Safety";
   static const String variance = "Variance";
+  static const String message = "Message";
   static const String kitchen = "Kitchen";
   static const String dinnerArea = "Dinning Area";
   static const String porch = "Porch/Patio/Balcony";
