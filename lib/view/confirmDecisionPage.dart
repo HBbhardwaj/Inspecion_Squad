@@ -11,6 +11,7 @@ import 'package:restaurants/models/confrimdecision_model.dart';
 import 'package:restaurants/utils/app_images.dart';
 import 'package:restaurants/utils/text_edit_controller.dart';
 
+import '../constant/app_color.dart';
 import '../utils/app_string.dart';
 
 class ConfrimDecisionPage extends StatefulWidget {
@@ -89,8 +90,8 @@ class _ConfrimDecisionState extends State<ConfrimDecisionPage>
                         children: [
                           Container(
                             color: (index % 2 == 0)
-                                ? Colors.deepPurple.shade50
-                                : Colors.grey.shade100,
+                                ? AppColor.listcolor1
+                                : AppColor.listcolor2,
                             child: ListTile(
                               leading: Checkbox(
                                   value: confrimDecisionlist[index].checkbox,
@@ -148,7 +149,7 @@ class _ConfrimDecisionState extends State<ConfrimDecisionPage>
                     padding: const EdgeInsets.all(8.0),
                     child: ElevatedButton.icon(
                         style: ElevatedButton.styleFrom(
-                            primary: Colors.grey.shade200),
+                            backgroundColor: AppColor.buttonPrimaryColor),
                         onPressed: () async {
                           image = await picker.pickImage(
                               source: ImageSource.gallery);
@@ -160,10 +161,11 @@ class _ConfrimDecisionState extends State<ConfrimDecisionPage>
                           AppIcons.camera,
                           height: 20,
                           width: 20,
+                          color: AppColor.white,
                         ),
                         label: const Text(
                           AppStrings.selectimage,
-                          style: TextStyle(color: Colors.black45),
+                          style: TextStyle(color: AppColor.white),
                         )),
                   ),
                   image == null
@@ -190,21 +192,21 @@ class _ConfrimDecisionState extends State<ConfrimDecisionPage>
                       children: [
                         ElevatedButton(
                             style: ElevatedButton.styleFrom(
-                                primary: Colors.grey.shade200),
+                                backgroundColor: AppColor.buttonPrimaryColor),
                             onPressed: () {},
                             child: const Text(
                               AppStrings.cancel,
-                              style: TextStyle(color: Colors.black45),
+                              style: TextStyle(color: AppColor.white),
                             )),
                         ElevatedButton(
                             style: ElevatedButton.styleFrom(
-                                primary: Colors.grey.shade200),
+                                backgroundColor: AppColor.buttonPrimaryColor),
                             onPressed: () {
                               gotoNextPage();
                             },
                             child: const Text(
                               AppStrings.ok,
-                              style: TextStyle(color: Colors.black45),
+                              style: TextStyle(color: AppColor.white),
                             )),
                       ],
                     ),

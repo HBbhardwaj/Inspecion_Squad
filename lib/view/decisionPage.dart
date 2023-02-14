@@ -1,6 +1,7 @@
 ///======================import items==============///
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:restaurants/constant/app_color.dart';
 import 'package:restaurants/contracts/ContractLogin.dart';
 import 'package:restaurants/models/decisionpagemodel.dart';
 import 'package:restaurants/utils/app_images.dart';
@@ -99,9 +100,9 @@ class _DecisionPageState extends State<DecisionPage>
                       child: Text(AppStrings.doesbathroom),
                     ),
                     TabBar(
-                        labelColor: Colors.red,
-                        unselectedLabelColor: Colors.grey,
-                        indicatorColor: Colors.red,
+                        labelColor: AppColor.buttonPrimaryColor,
+                        unselectedLabelColor: AppColor.themeColor,
+                        indicatorColor: AppColor.buttonPrimaryColor,
                         onTap: (int index) {
                           setState(() {
                             initialIndex = index;
@@ -153,8 +154,8 @@ class _DecisionPageState extends State<DecisionPage>
             Card(
               child: Container(
                 color: (index % 2 == 0)
-                    ? Colors.deepPurple.shade50
-                    : Colors.grey.shade200,
+                    ? AppColor.listcolor1
+                    : AppColor.listcolor2,
                 padding:
                     const EdgeInsets.symmetric(horizontal: 5, vertical: 15),
                 child: Column(
@@ -216,7 +217,7 @@ class _DecisionPageState extends State<DecisionPage>
         padding: EdgeInsets.only(top: 50),
         child: Text(
           AppStrings.nodata,
-          style: TextStyle(color: Colors.red, fontSize: 18),
+          style: TextStyle(color: AppColor.buttonPrimaryColor, fontSize: 18),
         ),
       ));
   @override

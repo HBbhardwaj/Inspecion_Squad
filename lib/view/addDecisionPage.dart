@@ -7,6 +7,8 @@ import 'package:restaurants/models/adddecision_model.dart';
 import 'package:restaurants/utils/app_images.dart';
 import 'package:restaurants/utils/app_string.dart';
 
+import '../constant/app_color.dart';
+
 class AddDecisionPage extends StatefulWidget {
   const AddDecisionPage({Key? key}) : super(key: key);
 
@@ -86,8 +88,8 @@ class _AddDecisionPageState extends State<AddDecisionPage>
                     children: [
                       Container(
                         color: (index % 2 == 0)
-                            ? Colors.deepPurple.shade50
-                            : Colors.grey.shade100,
+                            ? AppColor.listcolor1
+                            : AppColor.listcolor2,
                         child: ListTile(
                           leading: Checkbox(
                             value: addDecisionlist[index].checkbox,

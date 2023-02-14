@@ -1,6 +1,7 @@
 ///======================import items==============///
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:restaurants/constant/app_color.dart';
 import 'package:restaurants/contracts/ContractLogin.dart';
 import 'package:restaurants/utils/app_string.dart';
 
@@ -113,8 +114,8 @@ class _ConductInspectionState extends State<ConductInspection>
                 ),
                 Card(
                   color: (index % 2 == 0)
-                      ? Colors.grey.shade200
-                      : Colors.deepPurple.shade50,
+                      ? AppColor.listcolor1
+                      : AppColor.listcolor2,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(8.0),
                   ),
@@ -165,10 +166,11 @@ class _ConductInspectionState extends State<ConductInspection>
                               child: ElevatedButton(
                                 onPressed: () {},
                                 style: ElevatedButton.styleFrom(
-                                    primary: Colors.grey.shade200),
+                                    backgroundColor:
+                                        AppColor.buttonPrimaryColor),
                                 child: const Text(
                                   AppStrings.unsuccessful,
-                                  style: TextStyle(color: Colors.black54),
+                                  style: TextStyle(color: AppColor.white),
                                 ),
                               ),
                             )

@@ -6,6 +6,8 @@ import 'package:restaurants/contracts/ContractLogin.dart';
 import 'package:restaurants/models/finishInspection_model.dart';
 import 'package:restaurants/utils/app_string.dart';
 
+import '../constant/app_color.dart';
+
 class FinishInspectionPage extends StatefulWidget {
   const FinishInspectionPage({Key? key}) : super(key: key);
 
@@ -93,12 +95,12 @@ class _FinishInspectionPageState extends State<FinishInspectionPage>
                                   },
                                   child: Text(
                                     finishInspectionlist[index].item2,
-                                    style: TextStyle(color: Colors.black),
+                                    style: TextStyle(color: AppColor.white),
                                   ),
                                 ),
                                 style: ButtonStyle(
                                     backgroundColor: MaterialStateProperty.all(
-                                  Colors.grey.shade100,
+                                  AppColor.buttonPrimaryColor,
                                 )),
                               ),
                               finishInspectionlist[index].item3.isEmpty
@@ -111,14 +113,14 @@ class _FinishInspectionPageState extends State<FinishInspectionPage>
                                         elavtedbuttoncolor1
                                             ? finishInspectionlist[index].item3
                                             : finishInspectionlist[index].item3,
-                                        style: TextStyle(color: Colors.black),
+                                        style: TextStyle(color: AppColor.white),
                                       ),
                                       style: ButtonStyle(
                                           backgroundColor:
                                               MaterialStateProperty.all(
                                         elavtedbuttoncolor1
-                                            ? Colors.grey.shade100
-                                            : Colors.deepPurple.shade100,
+                                            ? AppColor.buttonPrimaryColor
+                                            : AppColor.listcolor1,
                                       )),
                                     ),
                             ],
@@ -129,8 +131,8 @@ class _FinishInspectionPageState extends State<FinishInspectionPage>
                         height: 5,
                         thickness: 1,
                       ),
-                      Divider(
-                        color: Colors.deepPurple.shade50,
+                      const Divider(
+                        color: AppColor.listcolor1,
                         height: 10,
                         thickness: 10,
                       ),

@@ -4,6 +4,7 @@ import 'package:restaurants/app_routes/routes.dart';
 import 'package:restaurants/contracts/ContractLogin.dart';
 import 'package:restaurants/utils/text_edit_controller.dart';
 
+import '../constant/app_color.dart';
 import '../utils/app_string.dart';
 
 ///======================import items==============///
@@ -52,11 +53,11 @@ class _UnsuccessfulPageState extends State<UnsuccessfulPage>
                   controller: unsuccessfulController,
                   keyboardType: TextInputType.multiline,
                   maxLines: 6,
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                       hintText: AppStrings.enterReason,
                       focusedBorder: OutlineInputBorder(
                           borderSide: BorderSide(
-                              width: 1, color: Colors.deepPurple.shade100))),
+                              width: 1, color: AppColor.listcolor1))),
                 ),
                 const Padding(
                   padding: EdgeInsets.all(8.0),
@@ -68,10 +69,10 @@ class _UnsuccessfulPageState extends State<UnsuccessfulPage>
                 const SizedBox(
                   height: 5,
                 ),
-                Divider(
+                const Divider(
                   height: 10,
                   thickness: 15,
-                  color: Colors.deepPurple.shade100,
+                  color: AppColor.listcolor1,
                 ),
                 const SizedBox(
                   height: 25,
@@ -95,11 +96,11 @@ class _UnsuccessfulPageState extends State<UnsuccessfulPage>
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(12),
                               ),
-                              primary: Colors.deepPurple.shade100),
+                              backgroundColor: AppColor.buttonPrimaryColor),
                           onPressed: () {},
                           child: const Text(
                             AppStrings.submit,
-                            style: TextStyle(color: Colors.black54),
+                            style: TextStyle(color: AppColor.white),
                           )),
                     ),
                   ],
@@ -111,10 +112,10 @@ class _UnsuccessfulPageState extends State<UnsuccessfulPage>
                     thickness: 1,
                   ),
                 ),
-                Divider(
+                const Divider(
                   height: 10,
                   thickness: 15,
-                  color: Colors.deepPurple.shade100,
+                  color: AppColor.listcolor1,
                 ),
                 const SizedBox(
                   height: 25,
@@ -138,13 +139,13 @@ class _UnsuccessfulPageState extends State<UnsuccessfulPage>
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(12),
                               ),
-                              primary: Colors.deepPurple.shade100),
+                              backgroundColor: AppColor.buttonPrimaryColor),
                           onPressed: () {
                             gotoNextPage();
                           },
                           child: const Text(
                             AppStrings.save,
-                            style: TextStyle(color: Colors.black54),
+                            style: TextStyle(color: AppColor.white),
                           )),
                     ),
                   ],
@@ -159,7 +160,7 @@ class _UnsuccessfulPageState extends State<UnsuccessfulPage>
                 Divider(
                   height: 10,
                   thickness: 15,
-                  color: Colors.deepPurple.shade100,
+                  color: AppColor.listcolor1,
                 ),
               ],
             ),

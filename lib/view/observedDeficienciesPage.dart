@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:restaurants/app_routes/routes.dart';
+import 'package:restaurants/constant/app_color.dart';
 import 'package:restaurants/contracts/ContractLogin.dart';
 import 'package:restaurants/utils/app_string.dart';
 
@@ -111,11 +112,12 @@ class _ObservedDeficienciesState extends State<ObservedDeficiencies>
                                           borderRadius:
                                               BorderRadius.circular(12),
                                         ),
-                                        primary: Colors.deepPurple.shade100),
+                                        backgroundColor:
+                                            AppColor.buttonPrimaryColor),
                                     onPressed: () {},
                                     child: const Text(
                                       AppStrings.resolve,
-                                      style: TextStyle(color: Colors.black54),
+                                      style: TextStyle(color: AppColor.white),
                                     )),
                               ),
                               SizedBox(
@@ -126,26 +128,12 @@ class _ObservedDeficienciesState extends State<ObservedDeficiencies>
                                           borderRadius:
                                               BorderRadius.circular(12),
                                         ),
-                                        primary: Colors.deepPurple.shade100),
+                                        backgroundColor:
+                                            AppColor.buttonPrimaryColor),
                                     onPressed: () {},
                                     child: const Text(
                                       AppStrings.photos,
-                                      style: TextStyle(color: Colors.black54),
-                                    )),
-                              ),
-                              SizedBox(
-                                width: 100,
-                                child: ElevatedButton(
-                                    style: ElevatedButton.styleFrom(
-                                      shape: RoundedRectangleBorder(
-                                        borderRadius: BorderRadius.circular(12),
-                                      ),
-                                      primary: Colors.deepPurple.shade100,
-                                    ),
-                                    onPressed: () {},
-                                    child: const Text(
-                                      AppStrings.comment,
-                                      style: TextStyle(color: Colors.black54),
+                                      style: TextStyle(color: AppColor.white),
                                     )),
                               ),
                               SizedBox(
@@ -156,13 +144,30 @@ class _ObservedDeficienciesState extends State<ObservedDeficiencies>
                                           borderRadius:
                                               BorderRadius.circular(12),
                                         ),
-                                        primary: Colors.deepPurple.shade100),
+                                        backgroundColor:
+                                            AppColor.buttonPrimaryColor),
+                                    onPressed: () {},
+                                    child: const Text(
+                                      AppStrings.comment,
+                                      style: TextStyle(color: AppColor.white),
+                                    )),
+                              ),
+                              SizedBox(
+                                width: 100,
+                                child: ElevatedButton(
+                                    style: ElevatedButton.styleFrom(
+                                        shape: RoundedRectangleBorder(
+                                          borderRadius:
+                                              BorderRadius.circular(12),
+                                        ),
+                                        backgroundColor:
+                                            AppColor.buttonPrimaryColor),
                                     onPressed: () {
                                       gotoNextPage();
                                     },
                                     child: const Text(
                                       AppStrings.delete,
-                                      style: TextStyle(color: Colors.black54),
+                                      style: TextStyle(color: AppColor.white),
                                     )),
                               ),
                             ],
@@ -177,12 +182,12 @@ class _ObservedDeficienciesState extends State<ObservedDeficiencies>
                         thickness: 1,
                       ),
                     ),
-                    Padding(
+                    const Padding(
                       padding: EdgeInsets.all(2),
                       child: Divider(
                         height: 10,
                         thickness: 15,
-                        color: Colors.deepPurple.shade50,
+                        color: AppColor.listcolor1,
                       ),
                     )
                   ],

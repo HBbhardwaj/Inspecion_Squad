@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:restaurants/app_routes/routes.dart';
+import 'package:restaurants/constant/app_color.dart';
 import 'package:restaurants/presenter/Presenter.dart';
 import 'package:restaurants/utils/app_images.dart';
 import 'package:restaurants/utils/app_string.dart';
@@ -95,10 +96,10 @@ class _LoginPageState extends State<LoginPage> implements View {
                     },
                   ),
                 ),
-                Text(
-                  msg == null ? '' : '$msg',
-                  style: const TextStyle(color: Colors.red),
-                ),
+                // Text(
+                //   msg == null ? '' : '$msg',
+                //   style: const TextStyle(color: Colors.red),
+                // ),
                 const Padding(
                     padding:
                         EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0)),
@@ -106,14 +107,14 @@ class _LoginPageState extends State<LoginPage> implements View {
                   width: 250,
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      primary: Colors.blue,
+                      backgroundColor: AppColor.buttonPrimaryColor,
                       minimumSize: const Size.fromHeight(40), // NEW
                     ),
                     child: const Text(AppStrings.login),
                     onPressed: () {
                       if (formKey.currentState!.validate()) {
                         formKey.currentState?.save();
-                        //presenter.doLogin();
+
                         widget._homeController.callLoginApi(presenter);
                       }
                     },

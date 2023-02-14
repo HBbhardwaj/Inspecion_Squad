@@ -5,6 +5,7 @@ import 'package:restaurants/contracts/ContractLogin.dart';
 import 'package:restaurants/utils/app_string.dart';
 
 import '../app_routes/routes.dart';
+import '../constant/app_color.dart';
 import '../models/commonlist_model.dart';
 import '../utils/app_images.dart';
 
@@ -113,8 +114,8 @@ class _InspectionStatuspageState extends State<InspectionStatuspage>
                 ),
                 Card(
                   color: (index % 2 == 0)
-                      ? Colors.grey.shade200
-                      : Colors.deepPurple.shade50,
+                      ? AppColor.listcolor1
+                      : AppColor.listcolor2,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(8.0),
                   ),

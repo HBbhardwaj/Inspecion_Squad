@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:restaurants/common_widget/textfeild.dart';
+import 'package:restaurants/constant/app_color.dart';
 import 'package:restaurants/contracts/ContractLogin.dart';
 import 'package:restaurants/utils/text_edit_controller.dart';
 
@@ -328,14 +329,14 @@ class _CreateInspectionPageState extends State<CreateInspectionPage>
               ),
               //======================Button================//
               ElevatedButton(
-                  style:
-                      ElevatedButton.styleFrom(primary: Colors.grey.shade200),
+                  style: ElevatedButton.styleFrom(
+                      backgroundColor: AppColor.buttonPrimaryColor),
                   onPressed: () {
                     createnewInsection();
                   },
                   child: const Text(
                     AppStrings.create,
-                    style: TextStyle(color: Colors.black45),
+                    style: TextStyle(color: AppColor.white),
                   ))
             ],
           )),

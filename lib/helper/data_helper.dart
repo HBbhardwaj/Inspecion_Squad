@@ -32,10 +32,10 @@ class DataHelper {
     return Get.snackbar(
       AppStrings.message,
       message,
-      snackPosition: SnackPosition.BOTTOM,
+      snackPosition: SnackPosition.TOP,
       colorText: AppColor.white,
       borderRadius: 10,
-      backgroundColor: AppColor.headTextColor.withOpacity(.60),
+      backgroundColor: AppColor.buttonPrimaryColor,
       margin: const EdgeInsets.symmetric(horizontal: 20.0),
     );
   }

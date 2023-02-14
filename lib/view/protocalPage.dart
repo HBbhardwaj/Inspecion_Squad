@@ -7,6 +7,8 @@ import 'package:restaurants/models/protocalpagemodel.dart';
 import 'package:restaurants/utils/app_images.dart';
 import 'package:restaurants/utils/app_string.dart';
 
+import '../constant/app_color.dart';
+
 class ProtocalPage extends StatefulWidget {
   const ProtocalPage({Key? key}) : super(key: key);
 
@@ -129,7 +131,9 @@ class _ProtocalPageState extends State<ProtocalPage>
                                       }
                                     },
                                     child: Card(
-                                      color: Colors.deepPurple.shade50,
+                                      color: (index % 2 == 0)
+                                          ? AppColor.listcolor1
+                                          : AppColor.listcolor2,
                                       child: ListTile(
                                         title: Text(UnitList[index].item1),
                                         trailing: FittedBox(

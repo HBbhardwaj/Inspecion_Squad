@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:restaurants/app_routes/routes.dart';
+import 'package:restaurants/constant/app_color.dart';
 import 'package:restaurants/models/dashboard_model.dart';
 import 'package:restaurants/utils/app_string.dart';
 import 'package:restaurants/view/selectpage.dart';
@@ -75,9 +76,9 @@ class _DashboardPageState extends State<DashboardPage>
       body: screenList.elementAt(presenterDeshBoradPage.demiSelectedIndex),
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.shifting,
-        backgroundColor: Colors.grey,
-        selectedItemColor: Colors.deepPurple.shade200,
-        unselectedItemColor: Colors.black45,
+        backgroundColor: AppColor.buttonPrimaryColor,
+        selectedItemColor: AppColor.buttonPrimaryColor,
+        unselectedItemColor: AppColor.themeDarkColor,
         selectedFontSize: 14,
         unselectedFontSize: 14,
         currentIndex: presenterDeshBoradPage.demiSelectedIndex,

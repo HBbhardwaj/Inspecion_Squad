@@ -1,6 +1,7 @@
 ///======================import items==============///
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:restaurants/constant/app_color.dart';
 import 'package:restaurants/utils/app_images.dart';
 import 'package:restaurants/utils/app_string.dart';
 import 'package:restaurants/view/dashboard_page.dart';
@@ -60,6 +61,7 @@ class _SelectPageState extends State<SelectPage> implements SelectPageView {
                               width: Get.width / 2,
                               height: Get.width / 2,
                               fit: BoxFit.cover,
+                              color: AppColor.buttonPrimaryColor,
                             ),
                           ),
                         ),
@@ -71,6 +73,7 @@ class _SelectPageState extends State<SelectPage> implements SelectPageView {
                             width: Get.width / 2,
                             height: Get.width / 2,
                             fit: BoxFit.fill,
+                            color: AppColor.buttonPrimaryColor,
                           ),
                         ),
                       ),
@@ -90,7 +93,7 @@ class _SelectPageState extends State<SelectPage> implements SelectPageView {
                       child: Text(
                         AppStrings.nycKitchens,
                         style: TextStyle(
-                            color: Colors.blue,
+                            color: AppColor.buttonPrimaryColor,
                             fontWeight: FontWeight.bold,
                             fontSize: 18),
                       ),
@@ -99,7 +102,7 @@ class _SelectPageState extends State<SelectPage> implements SelectPageView {
                       child: Text(
                         AppStrings.bodegas,
                         style: TextStyle(
-                            color: Colors.blue,
+                            color: AppColor.buttonPrimaryColor,
                             fontWeight: FontWeight.bold,
                             fontSize: 18),
                       ),

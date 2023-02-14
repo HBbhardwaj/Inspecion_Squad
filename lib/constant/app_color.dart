@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class AppColor {
-  static const themeColor = Color(0xff83BCE6);
+  static const themeColor = Color(0xff0A3161);
   static const headerBackground = Color(0xfff0f4f6);
   static const lightSkyBlueBackground = Color(0xffF4F9FD);
   static const textColor = Color(0xff2a2f4f);
@@ -15,6 +15,9 @@ class AppColor {
   static const themeDarkColor = Color(0xff283C5A);
   static const orangeColor = Color.fromRGBO(255, 105, 0, 1);
   static const redDarkColor = Color(0xff990000);
-  static const buttonPrimaryColor = Color(0xff765EEA);
-  static const buttonSecondaryColor = Color(0xff9256E0);
+  static const buttonPrimaryColor = Color(0xffB0204B);
+  static const buttonSecondaryColor = Color(0xffa81642);
+  static const backgroundLightColor = Color(0xffF6F6F6);
+  static const listcolor1 = Color(0xffBCAD89);
+  static const listcolor2 = Color(0xffC1C1C1);
 }
