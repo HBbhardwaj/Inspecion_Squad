@@ -157,7 +157,7 @@ class _UnsuccessfulPageState extends State<UnsuccessfulPage>
                     thickness: 1,
                   ),
                 ),
-                Divider(
+                const Divider(
                   height: 10,
                   thickness: 15,
                   color: AppColor.listcolor1,
